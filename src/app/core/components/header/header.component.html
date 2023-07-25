@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3" *ngIf="vm$ | async as vm">
+  <a class="navbar-brand" routerLink="/">Coding Problems</a>
+  <button class="navbar-toggler">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse" [ngClass]="vm.isMenuOpen ? 'expand' : 'collapse'">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="projects" routerLinkActive="active" class="nav-link">Completed Problems</a>
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,12 @@
+<div *ngIf="form">
+  <form [formGroup]="form">
+    <label for="arrayInput">Numbers in array (comma separated): </label>
+    <input type="text" id="arrayInput" formControlName="arrayInput" class="form-control">
+    <label for="selectedSum">Desired sum: </label>
+    <input type="number" id="selectedSum" class="form-control" formControlName="selectedSum">
+    <button class="btn btn-primary" (click)="checkSums()" [disabled]="!getIsFormValid()">Find sum</button>
+  </form>
+  <div *ngIf="hasSum !== undefined">
+    The array <strong>does {{!hasSum ? 'not ' : ''}}</strong>contain 2 numbers that add up to {{desiredSum}}
+  </div>
+</div>
