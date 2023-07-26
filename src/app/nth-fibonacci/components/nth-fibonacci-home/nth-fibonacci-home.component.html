@@ -1,0 +1,6 @@
+<label for="nInput">N: </label>
+<input type="number" id="nInput" class="form-control" [(ngModel)]="n">
+
+<div *ngIf="sequence">
+  {{sequence | json }}
+</div>

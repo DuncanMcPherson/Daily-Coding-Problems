@@ -16,6 +16,14 @@ const routes: Routes = [
   {
     path: 'array-sum',
     loadChildren: () => import('../array-sum/array-sum.module').then(m => m.ArraySumModule)
+  },
+  {
+    path: 'nth-fibonacci',
+    loadChildren: () => import('../nth-fibonacci/nth-fibonacci.module').then(m => m.NthFibonacciModule)
+  },
+  {
+    path: 'array-sort',
+    loadChildren: () => import('../array-sort/array-sort.module').then(m => m.ArraySortModule)
   }
 ]
 
